@@ -109,9 +109,27 @@
           ул. Б.Конюшенная, д.19/8
         </p>
         <p>тел.+7(812)275-75-75</p>
-        <a>Напишите нам</a>
+        <a href="#">Напишите нам</a>
       </section>
-      <div><a href="#"><img src="img/Слой 2.jpg" alt="карта"></a></div>
+      <section class="visually-hidden">
+        <form class="user" method="post" action="#">
+          <h1>Напишите нам</h1>
+          <p>
+            <label for="user-name">Ваше имя:</label>
+            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="user-mail">Ваш e-mail:</label>
+            <input id="user-mail" type="text" name="mail" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="message">Текст письма:</label>
+    			  <textarea id="message" rows="5">В сободной форме</textarea>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+      <div><a href="#"><img src="img/Слой2.jpg" alt="карта"></a></div>
     </footer>
     <div class="social">
       <a class="social-button" href="#">Вконтакте</a>
