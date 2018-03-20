@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+  <div class="header">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="368" height="153" alt="Логотип сайта «NERDS»"></a>
+        <a class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип сайта «NERDS»"></a>
         <ul class="site-navigation">
-          <li><a href="company.html">Студия</a></li>
-          <li><a href="clients.html">Клиенты</a></li>
-          <li class="site-navigation-current"><a href="store.html">Магазин</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li class="menu-item"><a href="index.html">Студия</a></li>
+          <li class="menu-item"><a href="clients.html">Клиенты</a></li>
+          <li class="menu-item-active"><a href="catalog.html">Магазин</a></li>
+          <li class="menu-item"><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
           <li class="login-link"><a href="#">Корзина</a></li>
@@ -20,6 +24,7 @@
     	</nav>
       <h1>Магазин готовых шаблонов</h1>
     </header>
+  </div>
     <main class="container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -81,47 +86,49 @@
           <li class="price"><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По названию</a></li>
-          <li><a href="#">По возрастанию</a></li>
-          <li><a href="#">По убыванию</a></li>
         </ul>
+        <div class="icon">
+          <div class="icon-down"><img src="img/icon-down-dir.svg" alt="стрелка вниз"></div>
+          <div class="icon-up"><img src="img/icon-up-dir.svg" alt="стрелка вверх"></div>
+        </div>
       </section>
       <section class="template list">
         <h2 class="visually-hidden">Перечень шаблонов</h2>
         <article>
           <a href="#"><img src="img/img-sedona.png" alt="макет SEDONA"></a>
-          <h3>SEDONA</h3>
+          <h3 class="name">SEDONA</h3>
           <span class="tipe">Информационный сайт для туристов</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <article>
           <a href="#"><img src="img/img-pink.png" alt="макет PINK"></a>
-          <h3>PINK</h3>
-          <span class="tipe">Взгляните на жизнь иначе!</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <h3 class="name">PINK APP</h3>
+          <span class="tipe">Продуктовый лендинг приложения для iOS и Android</span>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <article>
           <a href="#"><img src="img/img-barbershop.png" alt="макет BORODINSKI"></a>
-          <h3>BORODINSKI</h3>
-          <span class="tipe">Барбершоп BORODINSKI</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <h3 class="name">BARBERSHOP</h3>
+          <span class="tipe">Сайт салоны красоты. Для мужчин, да.</span>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <article>
           <a href="#"><img src="img/img-mishka.png" alt="макет MISHKA"></a>
-          <h3>MISHKA</h3>
-          <span class="tipe">Милые штуки ручной работы для дома</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <h3 class="name">MISHKA</h3>
+          <span class="tipe">Интернет-магазин вязаных игрушек</span>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <article>
           <a href="#"><img src="img/img-aplus.png" alt="макет A+"></a>
-          <h3>A+</h3>
-          <span class="tipe">Учеба еще никогда не была такой интересной!</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <h3 class="name">A PLUS</h3>
+          <span class="tipe">Лендинг курсов повышения квалификации</span>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <article>
           <a href="#"><img src="img/img-kvast.png" alt="макет КВАСТ"></a>
-          <h3>КВАСТ</h3>
-          <span class="tipe">Крафтовый квас всему голова</span>
-          <a class="button" href="#">9 900 РУБ.</a>
+          <h3 class="name">КВАСТ</h3>
+          <span class="tipe">Промо-сайт производителя крафтоого кваса</span>
+          <a class="button-buy" href="#">9 900 РУБ.</a>
         </article>
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-current"><a>1</a></li>
@@ -149,10 +156,10 @@
         <a class="social-button" href="#">Фейсбук</a>
         <a class="social-button" href="#">Инстаграм</a>
       </div>
-      <p>
+      <div class="stock">
         <b>Давайте дружить, это выгодно!</b>
-      </p>
-      <p>Скидка 10% для друзей из социальных сетей</p>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </footer>
   </body>
 </html>
